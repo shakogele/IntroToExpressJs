@@ -29,14 +29,14 @@ app.use((reqest, response, next) => {
   next();
 });
 
-app.use( (request, response, next) => {
-  var data = {
-    page: "Maintennace",
-    year: 2018,
-    welcomeMessage: "Welcome to Express. Maintennace"
-  }
-  response.render('maintenanse.hbs', data);
-});
+// app.use( (request, response, next) => {
+//   var data = {
+//     page: "Maintennace",
+//     year: 2018,
+//     welcomeMessage: "Welcome to Express. Maintennace"
+//   }
+//   response.render('maintenanse.hbs', data);
+// });
 
 app.get('/', (request, response) => {
   var data = {
@@ -53,6 +53,14 @@ app.get('/about', (request, response) => {
     year: 2018
   }
   response.render('about.hbs', data);
+});
+
+app.get('/projects', (request, response) => {
+  var data = {
+    page: "Projects Page",
+    year: 2018
+  }
+  response.render('projects.hbs', data);
 });
 
 app.get('/bad', (request, response) => {
